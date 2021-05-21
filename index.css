@@ -25,7 +25,7 @@ body {
     max-width: 90%;
     margin: auto;
     background-color: #fff;
-    max-height: 80vh;
+    min-height: 80vh;
     width: 100%;
     border-radius: 2.5rem; 
     padding: 20px;
@@ -42,10 +42,10 @@ body {
   #main-display p {
     /* display: flex; */
     justify-content: space-between;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #120216;
     margin-bottom: 0;
-    margin-top: 1rem;
+    margin-top: 0rem;
     max-width: 90%;
     
   }
@@ -54,6 +54,7 @@ body {
     /* max-width: 90%; */
     margin: auto;
     margin-left: 0;
+    margin-bottom: 0rem;
     background-color: var(--primary);
     min-height: 17vh;
     min-width: 90%;
@@ -103,16 +104,15 @@ body {
   #bottom-records {
     margin: auto;
     margin-left: 0;
-    background-color: var(--primary);
-    /* min-height: 17vh; */
+    background-color: var(--bgcolor);
+    min-height: 10vh;
     min-width: 90%;
-    border-radius: 2.5rem; 
+    /* border-radius: 2.5rem;  */
     padding: 20px;
-    display: flex;
     margin-top: 1rem;
     border: none;
     outline: none;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);  */
   }
 
   #main-profile {
