@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+  --primary: #42224A;
+  --secondary: #EF8767;
+  --third: #8f659a;
+  --bgcolor: #F7F4F7;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #main {
+    max-width: 90%;
+    margin: auto;
+    background-color: #fff;
+    max-height: 80vh;
+    width: 100%;
+    border-radius: 2.5rem; 
+    padding: 20px;
+    display: flex;
+    margin-top: 4rem;
+  }
+
+  #main-display {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+  }
+
+  #main-display p {
+    /* display: flex; */
+    justify-content: space-between;
+    font-size: 3rem;
+    color: #120216;
+    margin-bottom: 0;
+    margin-top: 1rem;
+    max-width: 90%;
+    
+  }
+
+  #display-expense {
+    /* max-width: 90%; */
+    margin: auto;
+    margin-left: 0;
+    background-color: var(--primary);
+    min-height: 17vh;
+    min-width: 90%;
+    border-radius: 2.5rem; 
+    padding: 20px;
+    display: flex;
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  #display-bottom {
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 26rem; */
+    margin-top: 1rem;
+    max-width: 90%;
+  }
+
+  #display-bottom #brk {
+    display: block;
+    color: gray;
+    font-size: 25px;
+    font-weight: 100;
+  }
+
+  #display-bottom #add-btn {
+    display: block;
+    background-color: var(--secondary);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    size: 6rem;
+    width: 45px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+
+  #bottom-records {
+    margin: auto;
+    margin-left: 0;
+    background-color: var(--primary);
+    /* min-height: 17vh; */
+    min-width: 90%;
+    border-radius: 2.5rem; 
+    padding: 20px;
+    display: flex;
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
+  }
+
+  #main-profile {
+    background-color: var(--bgcolor);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1.5;
+    border-radius: 2.5rem; 
+  }
+
+  
+
