@@ -17,7 +17,7 @@
             <p>Hello, <b>Syed</b></p>
             <div id='display-expense'>
                 <p>Total :</p>
-                <h1 id='total-exp'>&#x20b9;12,000.00</h1>
+                <h1 id='total-exp'> &#x20b9;12,000.00</h1>
             </div>
             <div id='display-bottom'>
                 <p id='brk'>Breakdown</p>
@@ -95,15 +95,48 @@
         </div>
         <div id='main-profile'>
             <div id='top-profile'>
-
+                <div id="user-profile">
+                    <div id="user-image">
+                        <img src='./me.jpeg' />
+                    </div>
+                    <h1 id='h1'>Syed Muzzammil</h1>
+                    <!-- <p id='quote'></p> -->
+                    <button id='sign-out'>Sign Out</button>
+                </div>
             </div>
             <div id='bottom-profile'>
-
+                <div id='bottom-form'>
+                    <form>
+                        <input type="text" id="amount" name="amount" placeholder='Amout'><br>
+                        <input type="text" id='place' name='place' placeholder="Place of Spend"><br>
+                        <label class="radio-inline">
+                            <input type="radio" id="Food & Beverage">Food & Beverage
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="Travel/Commute">Travel/Commute
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="Shopping">Shopping
+                        </label>
+                        <!-- <input type="radio" id="Food & Beverage" name="Food & Beverage">
+                        <label for="Food & Beverage">Food & Beverage</label> -->
+                        <!-- <input type="radio" id="Travel/Commute" name="Travel/Commute">
+                        <label for="Travel/Commute">Travel/Commute</label>
+                        <input type="radio" id="Shopping" name="Shopping">
+                        <label for="Shopping">Shopping</label> -->
+                        <br>
+                        <input type="submit" id='submit' value="Add to Expenses">
+                        <!-- <label class="radio-inline">
+                            <input type="radio" name="optradio" checked>Option 1
+                        </label> -->
+                    </form>
+                </div>
             </div>
         </div>
 
     </main>
     <script src="myscripts.js"></script>
 </body>
+<!-- &#x20b9;  -->
 
 </html>
