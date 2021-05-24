@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
 
 * {
@@ -342,7 +342,7 @@ body {
     border-radius: 1.5rem; 
     padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 1rem 1rem;
@@ -370,6 +370,7 @@ body {
   outline: none;
   font-size: 20px;
 }
+
 
 #place {
   border: none;
@@ -407,3 +408,35 @@ form {
   background-color: var(--third);
   color: white;
 }
+
+#icons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-right: 10px;
+}
+
+#icon-box-form-1 {
+  width: 35px;
+  height: 35px;
+  background-color: var(--third);
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  border-radius: 5px;
+  size: 10rem;
+}
+
+#icon-box-form-2 {
+  width: 35px;
+  height: 35px;
+  background-color: var(--third);
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  border-radius: 5px;
+  size: 10rem;
+  margin-bottom: 11rem;
+}
+
+
