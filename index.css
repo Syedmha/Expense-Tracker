@@ -80,13 +80,26 @@ body {
     opacity: 0.8;
   }
 
+  #dis-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5px;
+  }
+
+  #curr {
+    font-size: 40px;
+    margin: 0;
+    color: var(--bgcolor);
+  }
   #total-exp {
     color: var(--bgcolor);
     font-weight: 200px;
     font-size: 40px;
     margin-top: 1px;
-    margin-bottom: 9px;
-    margin-left: 5px;
+    padding-left: 6px; 
+    margin: 0;
+  
   }
 
   #display-bottom {

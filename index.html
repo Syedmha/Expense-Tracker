@@ -17,7 +17,12 @@
             <p>Hello, <b>Syed</b></p>
             <div id='display-expense'>
                 <p>Total :</p>
-                <h1 id='total-exp'> &#x20b9;12,000.00</h1>
+                <div id='dis-flex'>
+                    <h2 id='curr'>&#x20b9; </h2>
+                    <h1 id='total-exp'>
+                        0.00
+                    </h1>
+                </div>
             </div>
             <div id='display-bottom'>
                 <p id='brk'>Breakdown</p>
@@ -32,7 +37,7 @@
                         <i class="fas fa-pizza-slice"></i>
                     </div>
                     <div id='item-text1'>
-                        <h1 id='item-h1'>Breakfast</h1>
+                        <h1 id='item-h1'>Breakfast &nbsp</h1>
                         <p>Food & Beverage</p>
                     </div>
                     <div id='item-text2'>
@@ -48,7 +53,7 @@
                         <i class="fas fa-pizza-slice"></i>
                     </div>
                     <div id='item-text1'>
-                        <h1 id='item-h1'>Breakfast</h1>
+                        <h1 id='item-h1'>Breakfast &nbsp</h1>
                         <p>Food & Beverage</p>
                     </div>
                     <div id='item-text2'>
@@ -114,17 +119,17 @@
                     </div>
                 </div>
                 <div id='bottom-form'>
-                    <form>
-                        <input type="text" id="amount" name="amount" placeholder='Amout'><br>
+                    <form id='form'>
+                        <input type="text" id="amount" name="amount" placeholder='Amount'><br>
                         <input type="text" id='place' name='place' placeholder="Place of Spend"><br>
                         <label class="radio-inline">
-                            <input type="radio" id="Food & Beverage">Food & Beverage
+                            <input type="radio" id="Food & Beverage" name='cat'>Food & Beverage
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" id="Travel/Commute">Travel/Commute
+                            <input type="radio" id="Travel/Commute" name='cat'>Travel/Commute
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" id="Shopping">Shopping
+                            <input type="radio" id="Shopping" name='cat'>Shopping
                         </label>
                         <!-- <input type="radio" id="Food & Beverage" name="Food & Beverage">
                         <label for="Food & Beverage">Food & Beverage</label> -->
@@ -133,7 +138,7 @@
                         <input type="radio" id="Shopping" name="Shopping">
                         <label for="Shopping">Shopping</label> -->
                         <br>
-                        <input type="submit" id='submit' value="Add to Expenses">
+                        <button type="submit" id='submit'> Add to Expense </button>
                         <!-- <label class="radio-inline">
                             <input type="radio" name="optradio" checked>Option 1
                         </label> -->
