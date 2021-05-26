@@ -7,94 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/f3f9dcc437.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <title>Expense Tracker</title>
+    <title>Expense Tracker Authentication</title>
 </head>
 
 <body>
-    <main id="main">
-        <div id='main-display'>
-            <p>Hello, <b>Syed</b></p>
-            <div id='display-expense'>
-                <p>Total :</p>
-                <div id='dis-flex'>
-                    <h2 id='curr'>&#x20b9; </h2>
-                    <h1 id='total-exp'>
-                        0.00
-                    </h1>
-                </div>
+    <main id='s-main'>
+        <div id='s-main-display'>
+            <div id='s-signin'>
+                <h1 id='h1'>Welcome to Expense Tracker!</h1>
+                <p>Sign in with google to continue</p>
+                <button id='sign-in'><i class="fab fa-google"></i> &nbsp Sign In</button>
             </div>
-            <div id='display-bottom'>
-                <p id='brk'>Breakdown</p>
-                <i class="fas fa-angle-down"></i>
-                <!-- <button id='add-btn'>
-                    <i class="fa fa-plus"></i>
-                </button> -->
-            </div>
-            <!-- <div id='display-items'> -->
-            <div id='scroll'>
-                <div id='records'>
-                    <!-- <div id='bottom-records'>
 
-                    </div> -->
-                </div>
-            </div>
-            <!-- </div> -->
-
-        </div>
-        </div>
-        <div id='main-profile'>
-            <div id='top-profile'>
-                <div id="user-profile">
-                    <div id="user-image">
-                        <img src='./me.jpeg' />
-                    </div>
-                    <h1 id='h1'>Syed Muzzammil</h1>
-                    <!-- <p id='quote'></p> -->
-                    <button id='sign-out'>Sign Out</button>
-                </div>
-            </div>
-            <div id='bottom-profile'>
-                <div id='icons'>
-                    <div id='icon-box-form-1'>
-                        <i class="fas fa-rupee-sign"></i>
-                    </div>
-                    <div id='icon-box-form-2'>
-                        <i class="fas fa-tag"></i>
-                    </div>
-                </div>
-                <div id='bottom-form'>
-                    <form id='form'>
-                        <input type="text" id="amount" name="amount" placeholder='Amount'><br>
-                        <input type="text" id='place' name='place' placeholder="Place of Spend"><br>
-                        <label class="radio-inline">
-                            <input type="radio" id="Food & Beverage" name='cat' value='Food/Beverage'>Food/Beverage
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" id="Travel/Commute" name='cat' value='Travel/Commute'>Travel/Commute
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" id="Shopping" name='cat' value='Shopping'>Shopping
-                        </label>
-                        <!-- <input type="radio" id="Food & Beverage" name="Food & Beverage">
-                        <label for="Food & Beverage">Food & Beverage</label> -->
-                        <!-- <input type="radio" id="Travel/Commute" name="Travel/Commute">
-                        <label for="Travel/Commute">Travel/Commute</label>
-                        <input type="radio" id="Shopping" name="Shopping">
-                        <label for="Shopping">Shopping</label> -->
-                        <br>
-                        <button type="submit" id='submit'> Add to Expense </button>
-                        <!-- <label class="radio-inline">
-                            <input type="radio" name="optradio" checked>Option 1
-                        </label> -->
-                    </form>
-                </div>
-            </div>
         </div>
 
     </main>
-    <script src="myscripts.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyArQAp-LxtEfBpu0PO_9q7Yk2MfEGw50oE",
+            authDomain: "expense-tracker-51621.firebaseapp.com",
+            projectId: "expense-tracker-51621",
+            storageBucket: "expense-tracker-51621.appspot.com",
+            messagingSenderId: "76914875020",
+            appId: "1:76914875020:web:6c3812cfe34b63ea94b9a9"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src='googleauth.js'></script>
 </body>
-<!-- &#x20b9;  -->
 
 </html>

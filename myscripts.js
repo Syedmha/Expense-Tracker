@@ -2,28 +2,33 @@
 const disExpense = document.querySelector('#total-exp');
 const inputAmount = document.querySelector('#amount');
 const inputTitle = document.querySelector('#place');
-// let selectedCat =  document.querySelector( 'input[name="cat"]:checked'); 
 const form = document.querySelector('#form');
 const displayList = document.querySelector('#bottom-records');
 const records = document.querySelector('#records');
+const signout = document.querySelector('#sign-out');
 
-// Converting string elemets to float
+// declaring allExpenses array
 let totalExpenses = 0;
 const allExpenses = [];
 
-function logSubmit(e)
-{
-    e.preventDefault();
 
+// Submit function
+function logSubmit(e)
+{  
+     e.preventDefault();
+
+    // Declaring expenseItem object
     const expenseItem = {};
 
     let txtAmount = inputAmount.value;
     const expense = parseFloat(txtAmount);
+
+    //calcualting totalExpenses
     totalExpenses = totalExpenses + expense;
     disExpense.textContent = (Math.round(totalExpenses * 100) / 100).toFixed(2); 
     const exp1 = (Math.round(expense * 100) / 100).toFixed(2); 
-    // updateList();
 
+    // Setting values in the object
     expenseItem.amount = exp1;
     expenseItem.title = inputTitle.value;
 
@@ -105,7 +110,15 @@ function updateList({title, amount}) {
 form.addEventListener('submit', logSubmit);
 
 
+const googleSignOut = () => {
+    firebase.auth().signOut().then(() => {
+        window.location.assign('index.html');
+      }).catch((error) => {
+        console.error(error);
+      });
+}
 
+signout.addEventListener('click', googleSignOut);
 
 
 
