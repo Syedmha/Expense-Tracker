@@ -155,7 +155,8 @@ body {
   }
 
   #bottom-records {
-    margin: auto;
+    /* margin: auto; */
+    margin-bottom: 0;
     margin-left: 0;
     flex-direction: row;
     display: flex;
@@ -166,7 +167,7 @@ body {
     /* justify-content: flex-end; */
     /* border-radius: 2.5rem;  */
     /* padding: 10px; */
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     border: none;
     outline: none;
     /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);  */
