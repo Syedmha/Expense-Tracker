@@ -225,7 +225,7 @@ body {
     margin: 0;
     align-items: flex-end;
     padding-left: 2px;
-    margin-left: 9px;
+    margin-left: auto;
     text-align: right;
     color: gray;
   }

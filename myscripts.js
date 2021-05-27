@@ -31,22 +31,18 @@ function logSubmit(e)
     // Setting values in the object
     expenseItem.amount = exp1;
     expenseItem.title = inputTitle.value;
+    expenseItem.cat =  checkButton();
+    expenseItem.icon = checkIcon();
 
-   expenseItem.cat =  checkButton();
-
-
-    console.log(expenseItem);
-    
-
+    // Adding object into the array
     allExpenses.push(expenseItem);
-    //console.log(allExpenses);
-
-
+    
+    // Mapping through the array to display items
     allExpensesHTML = allExpenses.map(expense => {
          return  `
         <div id='bottom-records'>
     <div id='icon-box'>
-        <i class="fas fa-pizza-slice"></i>
+        ${expense.icon}
     </div>
     <div id='item-text1'>
         <h1 id='item-h1'>${expense.title} &nbsp</h1>
@@ -63,37 +59,27 @@ function logSubmit(e)
     </div>`;
     });
 
+    // Joining & Displaying items on the html
     const joinedallExpenses = allExpensesHTML.join(' ');
-    records.innerHTML = joinedallExpenses;
-
-    
-}
-
-function updateList({title, amount}) {
-
-    return`
-        <div id='bottom-records'>
-    <div id='icon-box'>
-        <i class="fas fa-pizza-slice"></i>
-    </div>
-    <div id='item-text1'>
-        <h1 id='item-h1'>${title} &nbsp</h1>
-        <p>Food/Beverage</p>
-    </div>
-    <div id='item-text2'>
-        <h1 id='item-price'>~ &#x20b9; ${amount}</h1>
-        <p> 21 May 2021</p>
-    </div>
-    <div id='item-delete'>
-        <i class="fas fa-times"></i>
-    </div>
-    </div>
-    </div>`;
-    
+    records.innerHTML = joinedallExpenses; 
 }
 
 
+// Funtion to check icons
+function checkIcon() {
+if(document.getElementById('Food & Beverage').checked) {    
+    return  `<i class="fas fa-pizza-slice"></i>`;
+}
+else if(document.getElementById('Travel/Commute').checked) {   
+    return   `<i class="fas fa-car"></i>`;
+}   
+else if(document.getElementById('Shopping').checked) {   
+   return  `<i class="fas fa-shopping-bag"></i>`;
+}  
+}
 
+
+//Function to check selected item
  function checkButton() {  
      if(document.getElementById('Food & Beverage').checked) {    
           return  document.getElementById("Food & Beverage").value;
@@ -109,7 +95,7 @@ function updateList({title, amount}) {
 
 form.addEventListener('submit', logSubmit);
 
-
+// Sign out function
 const googleSignOut = () => {
     firebase.auth().signOut().then(() => {
         window.location.assign('index.html');
