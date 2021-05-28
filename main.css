@@ -341,15 +341,15 @@ body {
 
 
 #user-image {
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   overflow: hidden;
 }
 
 #user-image img {
   object-fit: cover;
-  max-width: 100%;
+  max-width: 1000%;
 }
 
 #bottom-profile {
